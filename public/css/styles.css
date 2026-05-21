@@ -1,0 +1,73 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background-color: rgb(235, 217, 253);
+  font-family: "Inter", sans-serif;
+}
+
+.hero {
+  height: 40%;
+}
+
+.hero-image {
+  height: 100%;
+  background: url("/images/layered-waves-haikei.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-text {
+  width: 50%;
+  position: relative;
+  top: 3rem;
+  left: 12rem;
+  color: aliceblue;
+}
+
+.hero-welcome-text {
+  color: #4e02be;
+  margin-bottom: 1rem;
+}
+
+.hero-heading {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.navbar {
+  height: 20%;
+  border-radius: 10px;
+  margin: 0 0.5rem;
+  padding: 0 2rem;
+  background-color: aliceblue;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-logo {
+  height: 2.5rem;
+  vertical-align: middle;
+}
+
+.navbar-anchor {
+  padding: 0 2rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.btn-create-post {
+  background-color: #4e02be;
+  color: aliceblue;
+  border-radius: 10px;
+  border: none;
+  height: 2.5rem;
+  width: 8rem;
+  font-weight: 550;
+}
