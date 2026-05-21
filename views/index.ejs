@@ -7,15 +7,32 @@
     <section class="hero">
       <div class="hero-image">
         <%- include('./partials/navbar.ejs') %>
-        <div class="hero-text">
-          <h3 class="hero-welcome-text">Welcome to MyBlog 👋</h3>
-          <h1 class="hero-heading">Thoughts, Stories & Ideas</h1>
-          <p>
-            A simple blogging platform to share your ideas <br />
-            with the world.
-          </p>
+        <div class="hero-data">
+          <div class="hero-text">
+            <h3 class="hero-welcome-text">Welcome to MyBlog 👋</h3>
+            <h1 class="hero-heading">Thoughts, Stories & Ideas</h1>
+            <p>
+              A simple blogging platform to share your ideas <br />
+              with the world.
+            </p>
+          </div>
+          <img class="img-hero" src="/images/hero image.png" />
         </div>
       </div>
     </section>
+    <main class="all-blogs">
+      <div class="index-panel">
+        <h3>All Posts</h3>
+        <p>Newest First ↓</p>
+      </div>
+      <div class="post-area">
+        <h1 class="msg-no-post">No posts yet</h1>
+        <p>You haven't created any post yet.</p>
+        <p>Shour your thoughts and ideas with the world!</p>
+        <a class="link-create-post" href="/create"
+          >Start writing your first post →</a
+        >
+      </div>
+    </main>
   </body>
 </html>
