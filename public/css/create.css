@@ -2,21 +2,32 @@ body {
   background: url("/images/background-create-post.svg");
   background-repeat: no-repeat;
   background-size: cover;
+  height: 100vh;
+}
+
+main {
+  display: flex;
+  justify-content: center;
 }
 
 .create-post {
   background-color: rgb(244, 228, 252);
   height: 35rem;
-  margin: 3rem 8rem;
+  width: 60rem;
+  margin: 3rem 0;
   border-radius: 10px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-  display: flex;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  /* display: flex;
+  justify-content: space-around;*/
 }
 
 .img-create-post {
   height: 35rem;
   width: 20rem;
+  margin-left: 3rem;
 }
 
 label {
@@ -66,6 +77,7 @@ label span {
 .ql-toolbar.ql-snow {
   background-color: white;
   border-radius: 12px 12px 0 0;
+  width: 30rem;
 }
 
 .ql-container.ql-snow {
@@ -76,4 +88,28 @@ label span {
 
 #editor {
   height: 10rem;
+  width: 30rem;
+}
+
+.btn-reset {
+  font-size: 1rem;
+  height: 2.5rem;
+  width: 9rem;
+  border-radius: 7px;
+  border: 2px solid blueviolet;
+  color: blueviolet;
+}
+
+.btn-publish {
+  color: aliceblue;
+  font-size: 1rem;
+  height: 2.5rem;
+  width: 9rem;
+  background: linear-gradient(
+    to bottom right,
+    rgb(95, 2, 142),
+    rgb(185, 45, 232)
+  );
+  border-radius: 7px;
+  border: none;
 }
