@@ -1,0 +1,49 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background-color: #e7ceff;
+  font-family: "Inter", sans-serif;
+}
+
+.hidden {
+  display: none;
+}
+
+.navbar {
+  height: 4rem;
+  border-radius: 10px;
+  padding: 0 2rem;
+  background-color: aliceblue;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-logo {
+  height: 2.5rem;
+  vertical-align: middle;
+}
+
+.navbar-anchor {
+  padding: 0 2rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.btn-create-post {
+  background-color: #4e02be;
+  color: aliceblue;
+  border-radius: 10px;
+  border: none;
+  height: 2.5rem;
+  width: 9rem;
+  font-weight: 550;
+  text-decoration: none;
+  align-content: center;
+  text-align: center;
+}

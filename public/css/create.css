@@ -1,0 +1,79 @@
+body {
+  background: url("/images/background-create-post.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.create-post {
+  background-color: rgb(244, 228, 252);
+  height: 35rem;
+  margin: 3rem 8rem;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: space-around;
+}
+
+.img-create-post {
+  height: 35rem;
+  width: 20rem;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+}
+
+#title {
+  display: block;
+  width: 30rem;
+  height: 2rem;
+  border-radius: 10px;
+  padding: 0 1rem;
+  border: 2px solid rgb(169, 169, 169, 0.5);
+  background-color: rgb(244, 228, 252);
+}
+
+label span {
+  font-weight: normal;
+}
+
+.img-upload {
+  border-radius: 10px;
+  border: 2px dashed rgb(115, 72, 179, 0.5);
+  height: 6rem;
+  width: 30rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-upload img {
+  height: 3rem;
+  width: 4rem;
+  margin-right: 2rem;
+  opacity: 0.5;
+}
+
+.img-upload p {
+  font-weight: normal;
+  font-size: 0.7rem;
+  padding-top: 1rem;
+  opacity: 0.5;
+}
+
+.ql-toolbar.ql-snow {
+  background-color: white;
+  border-radius: 12px 12px 0 0;
+}
+
+.ql-container.ql-snow {
+  background-color: white;
+  border-radius: 0 0 12px 12px;
+  /* min-height: 250px; */
+}
+
+#editor {
+  height: 10rem;
+}

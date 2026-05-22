@@ -4,8 +4,11 @@
   </h2>
   <div>
     <a class="navbar-anchor" href="/">Home</a>
-    <a class="navbar-anchor" href="/about">About</a>
     <a class="navbar-anchor" href="/contact">Contact</a>
+    <a class="navbar-anchor" href="/about ">About</a>
   </div>
-  <button class="btn-create-post">✏️ Create Post</button>
+  <% if(locals.createBlogbutton) {%>
+    <a class="btn-create-post" href="/create">✏️ Create Post</a>
+    <% }%>
 </section>
+

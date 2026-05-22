@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('./partials/head.ejs') %>
+    <link rel="stylesheet" href="/css/create.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/quill@2/dist/quill.snow.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div><%- include('./partials/navbar.ejs') %></div>
+    <main class="create-post">
+      <form action="/create" method="POST">
+        <h1>Create New Blog Post</h1>
+        <p>share your thoughts with the world ✨</p>
+        <div class="blog-title">
+          <label for="title">Title</label>
+          <input
+            type="text"
+            id="title"
+            name="title"
+            placeholder="Enter an engagin title"
+          />
+        </div>
+        <div class="blog-img">
+          <label for="img-blog"
+            >Featured Image
+            <span>(Optional)</span>
+            <div class="img-upload">
+              <img src="/images/image-icon.png" />
+              <div>
+                <h4>Click to upload an image</h4>
+                <p>or drag and drop</p>
+                <p>JPG, PNG or WEBP (max. 5MB)</p>
+              </div>
+            </div>
+          </label>
+          <input type="file" id="img-blog" name="featured-image" hidden />
+        </div>
+        <div class="blog-content">
+          <label for="content">Content</label>
+          <!-- below 2 lines are used imlementing text editor library and a workaround to access it by express -->
+          <input type="hidden" name="content" id="content" />
+          <div id="editor"></div>
+        </div>
+      </form>
+      <img
+        src="/images/create-post.png"
+        alt="create post image"
+        class="img-create-post"
+      />
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/quill@2/dist/quill.js"></script>
+    <script src="/js/create.js"></script>
+  </body>
+</html>
