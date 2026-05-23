@@ -9,7 +9,7 @@
     />
   </head>
   <body>
-    <div><%- include('./partials/navbar.ejs') %></div>
+    <%- include('./partials/navbar.ejs') %>
     <main>
       <form action="/create" method="POST" class="create-post">
         <div class="title-create">
@@ -46,8 +46,10 @@
           <input type="hidden" name="content" id="content" />
           <div id="editor"></div>
         </div>
-        <button type="reset" class="btn-reset">Cancel</button>
-        <button type="submit" class="btn-publish">📮 Publish Post</button>
+        <div class="btn-form">
+          <button type="reset" class="btn-reset">Cancel</button>
+          <button type="submit" class="btn-publish">📮 Publish Post</button>
+        </div>
       </form>
       <img
         src="/images/create-post.png"

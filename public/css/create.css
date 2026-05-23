@@ -1,33 +1,55 @@
 body {
-  background: url("/images/background-create-post.svg");
-  background-repeat: no-repeat;
-  background-size: cover;
+  min-width: 90rem;
   height: 100vh;
 }
 
 main {
+  background: url("/images/background-create-post.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: calc(100vh - 4rem);
+  min-width: 90rem;
+  padding-left: 8rem;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  gap: 3rem;
 }
 
 .create-post {
-  background-color: rgb(244, 228, 252);
-  height: 35rem;
+  background-color: rgb(244, 228, 252, 0.5);
+  /* height: 100%; */
   width: 60rem;
+  min-width: 60%;
   margin: 3rem 0;
   border-radius: 10px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 3fr 7fr;
   justify-items: center;
-  /* display: flex;
-  justify-content: space-around;*/
+}
+
+.title-create {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  margin: 1.5rem 0;
+  color: blueviolet;
+}
+
+.blog-title {
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+
+.blog-content {
+  grid-row-start: 2;
+  grid-row-end: 5;
+  margin-left: 2rem;
 }
 
 .img-create-post {
   height: 35rem;
   width: 20rem;
-  margin-left: 3rem;
+  margin: 3rem 0;
 }
 
 label {
@@ -37,74 +59,81 @@ label {
 
 #title {
   display: block;
-  width: 30rem;
-  height: 2rem;
+  width: 25rem;
+  height: 3rem;
   border-radius: 10px;
   padding: 0 1rem;
+  margin-top: 1rem;
   border: 2px solid rgb(169, 169, 169, 0.5);
   background-color: rgb(244, 228, 252);
 }
 
 label span {
   font-weight: normal;
+  font-size: small;
 }
 
 .img-upload {
   border-radius: 10px;
-  border: 2px dashed rgb(115, 72, 179, 0.5);
-  height: 6rem;
-  width: 30rem;
+  border: 2px dashed rgb(115, 72, 179);
+  height: 8rem;
+  width: 25rem;
+  margin-top: 1rem;
   cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
+  opacity: 0.5;
 }
 
 .img-upload img {
   height: 3rem;
   width: 4rem;
   margin-right: 2rem;
-  opacity: 0.5;
+  /* opacity: 0.5; */
 }
 
 .img-upload p {
   font-weight: normal;
   font-size: 0.7rem;
   padding-top: 1rem;
-  opacity: 0.5;
+  /* opacity: 0.5; */
 }
 
 .ql-toolbar.ql-snow {
-  background-color: white;
+  background-color: rgb(244, 228, 252);
   border-radius: 12px 12px 0 0;
   width: 30rem;
+  margin-top: 1rem;
 }
 
 .ql-container.ql-snow {
-  background-color: white;
+  background-color: rgb(244, 228, 252);
   border-radius: 0 0 12px 12px;
   /* min-height: 250px; */
 }
 
 #editor {
-  height: 10rem;
+  height: 20rem;
   width: 30rem;
 }
 
 .btn-reset {
   font-size: 1rem;
   height: 2.5rem;
-  width: 9rem;
+  width: 10rem;
   border-radius: 7px;
   border: 2px solid blueviolet;
   color: blueviolet;
+  margin: 1rem;
+  background: rgb(244, 228, 252);
 }
 
 .btn-publish {
   color: aliceblue;
   font-size: 1rem;
   height: 2.5rem;
-  width: 9rem;
+  width: 10rem;
   background: linear-gradient(
     to bottom right,
     rgb(95, 2, 142),
@@ -112,4 +141,5 @@ label span {
   );
   border-radius: 7px;
   border: none;
+  margin: 1rem;
 }
