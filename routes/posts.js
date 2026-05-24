@@ -4,7 +4,10 @@ import {
   getCreateBlogPost,
   getContacts,
   getAboutUs,
+  postNewBlog,
+  getBlog,
 } from "../controllers/postControllers.js";
+import upload from "../middlewares/upload.js";
 
 const route = express.Router();
 
@@ -14,6 +17,12 @@ route.get("/create", getCreateBlogPost);
 
 route.get("/contact", getContacts);
 
-route.get("/about", getAboutUs);
+route.get("/ab  out", getAboutUs);
+
+// route.post("/create", postNewBlog);
+
+route.post("/create", upload.single("featured-image"), postNewBlog);
+
+route.get("/:id", getBlog);
 
 export default route;

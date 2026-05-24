@@ -118,15 +118,22 @@ label span {
   width: 30rem;
 }
 
-.btn-reset {
-  font-size: 1rem;
+.btn-cancel {
+  display: inline-block;
   height: 2.5rem;
   width: 10rem;
   border-radius: 7px;
   border: 2px solid blueviolet;
-  color: blueviolet;
   margin: 1rem;
-  background: rgb(244, 228, 252);
+  cursor: pointer;
+  align-content: center;
+  padding-left: 3rem;
+}
+
+.btn-reset {
+  text-decoration: none;
+  font-size: 1rem;
+  color: blueviolet;
 }
 
 .btn-publish {
@@ -142,4 +149,5 @@ label span {
   border-radius: 7px;
   border: none;
   margin: 1rem;
+  cursor: pointer;
 }

@@ -1,0 +1,46 @@
+body {
+  min-width: 90rem;
+  min-height: 100vh;
+}
+
+.container {
+  min-height: calc(100vh - 4rem);
+  min-width: 90rem;
+  background: url("/images/background-create-post.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 3rem 18rem;
+}
+
+main {
+  min-height: 78vh;
+  width: 60rem;
+  background-color: rgb(244, 228, 252, 0.5);
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  padding: 2rem 4rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+.title-blog {
+  padding: 1rem;
+  text-align: center;
+  color: blueviolet;
+}
+
+.img-blog {
+  height: 15rem;
+  border-radius: 10px;
+  min-width: 52rem;
+  margin-bottom: 2rem;
+}
+
+.blog-content ol,
+.blog-content ul {
+  /* list-style-position: inside; */
+  padding-left: 1rem;
+  margin-left: 1rem;
+}

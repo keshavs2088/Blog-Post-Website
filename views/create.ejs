@@ -11,7 +11,12 @@
   <body>
     <%- include('./partials/navbar.ejs') %>
     <main>
-      <form action="/create" method="POST" class="create-post">
+      <form
+        action="/create"
+        method="POST"
+        class="create-post"
+        enctype="multipart/form-data"
+      >
         <div class="title-create">
           <h1>Create New Blog Post</h1>
           <p>share your thoughts with the world ✨</p>
@@ -48,7 +53,9 @@
           <div id="editor"></div>
         </div>
         <div class="btn-form">
-          <button type="reset" class="btn-reset">Cancel</button>
+          <div class="btn-cancel">
+            <a href="/" class="btn-reset">Cancel</a>
+          </div>
           <button type="submit" class="btn-publish">📮 Publish Post</button>
         </div>
       </form>
