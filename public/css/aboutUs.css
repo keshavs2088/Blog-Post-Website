@@ -1,0 +1,81 @@
+main {
+  min-height: calc(100vh - 4rem);
+  min-width: 90vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: url("/images/background-create-post.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.about-us {
+  height: 30rem;
+  width: 25rem;
+  align-content: end;
+  justify-self: end;
+  margin-right: 2rem;
+}
+
+.blog-goal {
+  margin-top: 2rem;
+  font-weight: 300;
+}
+
+h1 {
+  margin-bottom: 2rem;
+  color: #320378;
+  font-size: 4rem;
+}
+
+.principle,
+.write,
+.read,
+.connect {
+  display: flex;
+}
+
+.img-write,
+.img-read,
+.img-connect {
+  height: 4rem;
+  width: 3rem;
+  border-radius: 10px;
+  margin: 2rem 1rem 2rem 0;
+}
+
+.write-content,
+.read-content,
+.connect-content {
+  align-content: center;
+}
+
+.principle-content {
+  font-size: x-small;
+}
+
+.img-create-post {
+  height: 30rem;
+  width: 20rem;
+}
+
+.footer {
+  height: 8rem;
+  width: 70rem;
+  color: #320378;
+  background-color: rgb(192, 117, 227, 0.8);
+  margin: 0 15rem;
+  border-radius: 10px;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  display: flex;
+  justify-content: center;
+}
+
+.footer p {
+  align-content: center;
+  font-size: large;
+}
+
+.img-footer {
+  height: 8rem;
+}

@@ -1,7 +1,12 @@
-import { addBlog, getBlogFromData } from "../data/posts.js";
+import {
+  addBlog,
+  getBlogFromData,
+  generateId,
+  getAllBlogs,
+} from "../data/posts.js";
 
 export const getDashboard = function (req, res) {
-  res.render("index.ejs", { createBlogbutton: true });
+  res.render("dashboard.ejs", { createBlogbutton: true, blogs: getAllBlogs() });
 };
 
 export const getCreateBlogPost = function (req, res) {
@@ -19,13 +24,18 @@ export const getAboutUs = function (req, res) {
 };
 
 export const postNewBlog = function (req, res) {
-  const blogId = Math.floor(Math.random() * 1000);
+  const date = new Date();
+  const today = new Intl.DateTimeFormat("en-AU", {
+    dateStyle: "full",
+    timeStyle: "short",
+  }).format(date);
 
   const blog = {
     title: req.body.title,
+    datePublished: today,
     image: req.file ? req.file.filename : null,
     content: req.body.content,
-    id: blogId,
+    id: generateId(),
   };
 
   addBlog(blog);
@@ -34,6 +44,10 @@ export const postNewBlog = function (req, res) {
 
 export const getBlog = function (req, res) {
   const blogToDisplay = getBlogFromData(Number(req.params.id));
+
+  if (!blogToDisplay) {
+    return res.status(404).send("Blog not found");
+  }
 
   res.render("showBlog.ejs", { blog: blogToDisplay });
 };

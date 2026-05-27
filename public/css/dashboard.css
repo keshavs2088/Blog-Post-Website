@@ -38,16 +38,17 @@
   font-size: 3rem;
   margin-bottom: 1rem;
 }
-.index-panel {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 1rem;
-}
 
 .all-blogs {
   height: 65%;
   padding: 1rem 5rem 3rem 5rem;
   min-width: 90rem;
+}
+
+.index-panel {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
 }
 
 .post-area {
@@ -73,4 +74,74 @@
   margin-top: 2rem;
   color: #4e02be;
   text-decoration: none;
+}
+
+.existing-blogs {
+  min-height: 22rem;
+}
+
+.list-blogs {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+li {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  height: 10rem;
+  width: 28rem;
+  padding: 1rem;
+}
+
+.blog-display {
+  display: flex;
+  height: 7rem;
+}
+
+.text-content {
+  max-height: 7rem;
+  width: 15rem;
+  font-size: small;
+}
+
+.text-content h3 {
+  padding-bottom: 0.5rem;
+}
+
+.content-card-display {
+  line-height: 1.7;
+}
+
+.content-card-display ul,
+.content-card-display ol {
+  padding-left: 2rem;
+}
+
+.content-card-display p {
+  margin-bottom: 1rem;
+}
+
+.img-blog {
+  height: 6rem;
+  width: 9rem;
+  margin-left: 2rem;
+  border-radius: 10px;
+}
+
+.blog-action {
+  display: flex;
+  justify-content: space-between;
+}
+
+.date-card {
+  font-size: small;
+  opacity: 0.5;
+}
+
+.delete {
+  height: 2rem;
+  width: 6rem;
+  color: red;
 }

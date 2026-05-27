@@ -1,0 +1,49 @@
+main {
+  min-height: calc(100vh - 4rem);
+  min-width: 90vw;
+  display: flex;
+  justify-content: center;
+  background: url("/images/background-create-post.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.contact-us {
+  height: 40rem;
+  width: 30rem;
+  align-content: center;
+}
+
+h1 {
+  padding-bottom: 1rem;
+  color: #320378;
+  font-size: 3rem;
+}
+
+h3 {
+  color: #320378;
+}
+
+p {
+  padding-bottom: 2rem;
+  font-weight: 300;
+}
+
+.contact-us img {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 100px;
+}
+
+.contact {
+  display: flex;
+}
+
+.contact img {
+  margin-right: 2rem;
+}
+
+.img-create-post {
+  height: 40rem;
+  width: 30rem;
+}

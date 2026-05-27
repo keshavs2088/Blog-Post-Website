@@ -2,6 +2,67 @@
 <html lang="en">
   <head>
     <%- include('./partials/head.ejs') %>
+    <link rel="stylesheet" href="/css/aboutUs.css"
   </head>
-  <body></body>
+  <body>
+    <%- include('./partials/navbar.ejs') %>
+    <main>
+      <div class="about-us">
+        <h1>About Us</h1>
+        <p class="blog-idea">We are passionate about stories, ideas, and creating a spacewhere voices can be heard.</p>
+        <p class="blog-goal">MyBlog  is a platformfor writers, dreamers, and thinkers to share knowledge, experience, and inspiration with the world.</p>
+        <section class="principle">
+          <div class="write">
+            <img
+              src="/images/write.png"
+              alt="write principle image"
+              class="img-write"
+            />
+            <div class="write-content">
+              <h4>Write</h4>
+              <p class="principle-content">Express your thoughts freely.</p>
+            </div>
+          </div>
+          <div class="read">
+            <img
+              src="/images/read.png"
+              alt="read principle image"
+              class="img-read"
+            />
+            <div class="read-content">
+              <h4>Read</h4>
+              <p class="principle-content">Discover diverse stories and ideas.</p>
+            </div>
+          </div>
+          <div class="connect">
+            <img
+              src="/images/connect.png"
+              alt="connect principle image"
+              class="img-connect"
+            />
+            <div class="connect-content">
+              <h4>Connect</h4>
+              <p class="principle-content">Build a community that inspires.</p>
+            </div>
+          </div>
+        </section>
+      </div>
+      <img
+        src="/images/create-post.png"
+        alt="create post image"
+        class="img-create-post"
+      />
+      <section class="footer">
+        <img src="/images/footer-image.png"
+        alt="footer image"
+        class="img-footer">
+        <p>"Great stories connect us. Our mission is to empower voices and inspire the world through words."</p>
+        <img src="/images/footer-image.png"
+        alt="footer image"
+        class="img-footer">
+      </section>
+    </main>
+    
+    
+  </body>
 </html>

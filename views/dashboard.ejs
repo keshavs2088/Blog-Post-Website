@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel ='stylesheet' href="/css/dashboard.css"
+    <%- include('./partials/head.ejs') %> 
+    
+  </head>
+  <body>
+    <section class="hero">
+      <div class="hero-image">
+        <%- include('./partials/navbar.ejs') %>
+        <div class="hero-data">
+          <div class="hero-text">
+            <h3 class="hero-welcome-text">Welcome to MyBlog 👋</h3>
+            <h1 class="hero-heading">Thoughts, Stories & Ideas</h1>
+            <p>
+              A simple blogging platform to share your ideas <br />
+              with the world.
+            </p>
+          </div>
+          <img class="img-hero" src="/images/hero image.png" />
+        </div>
+      </div>
+    </section>
+    <main class="all-blogs">
+      <div class="index-panel">
+        <h3>All Posts</h3>
+        <p>Newest First ↓</p>
+      </div>
+      <%if(blogs.length === 0) {
+        %>
+      <div class="post-area">
+        <h1 class="msg-no-post">No posts yet</h1>
+        <p>You haven't created any post yet.</p>
+        <p>Shour your thoughts and ideas with the world!</p>
+        <a class="link-create-post" href="/create"
+          >Start writing your first post →</a
+        >
+      </div>
+      <% } else {%>
+
+      <div class="existing-blogs">
+        <ul class="list-blogs">
+          <% blogs.forEach(blog => { %>
+            <li>
+              <section class="blog-display">
+                <div class="text-content">
+                  <h3 class="title-cards">
+                    <%# condition to cutoff heading if it is too long %>
+                    <% if(blog.title.length<30) {%>
+                      <%= blog.title%></h3>
+                    <% } else { %>
+                      <%= blog.title.slice(0,30)%>...</h3>
+                    <% } %>
+                  <div class="content-card">
+                    <%# condition to cutoff content if it is too long %>
+                    <% if(blog.content.length<150) {%>
+                      <%- blog.content.replace(/<[^>]*>/g, "")%></div>
+                    <% } else { %>
+                      <%- blog.content.replace(/<[^>]*>/g, "").slice(0, 150) %> ...</div> 
+                    <% } %>
+  
+                </div>  
+                <img src="<%= blog.image?`/uploads/${blog.image}`:'/images/logo.jpg' %>" class="img-blog" />
+              </section>
+
+              <section class="blog-action">
+                <div class="date-card">
+                  <%= blog.datePublished.split("at")[0].split(", ")[1] %>
+                </div> 
+                <a href="/edit" class="edit-blog">🖋️ Edit</a>
+                <p class="delete">🚩Delete</p>
+              </section>
+            </li>
+          <%});%>
+          </ul>
+        </div>
+        <% } %>
+
+    </main>
+  </body>
+</html>

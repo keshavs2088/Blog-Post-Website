@@ -2,6 +2,44 @@
 <html lang="en">
   <head>
     <%- include('./partials/head.ejs') %>
+    <link rel="stylesheet" href="/css/contactUs.css" />
   </head>
-  <body></body>
+  <body>
+    <%- include('./partials/navbar.ejs') %>
+    <main>
+      <section class="contact-us">
+        <h1>Contact Us</h1>
+        <p>
+          We'd love to hear from you! Send us a message and we will respond as
+          soon as possible
+        </p>
+        <div class="contact">
+          <img src="/images/email.png" alt="email image" />
+          <div>
+            <h3>Email</h3>
+            <p>keshavs2088@gmail.com</p>
+          </div>
+        </div>
+        <div class="contact">
+          <img src="/images/phone3.png" alt="phone image" />
+          <div>
+            <h3>Phone</h3>
+            <p>0405881088</p>
+          </div>
+        </div>
+        <div class="contact">
+          <img src="/images/location.png" alt="location image" />
+          <div>
+            <h3>Location</h3>
+            <p>Canberra, Australia</p>
+          </div>
+        </div>
+      </section>
+      <img
+        src="/images/create-post.png"
+        alt="create post image"
+        class="img-create-post"
+      />
+    </main>
+  </body>
 </html>

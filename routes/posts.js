@@ -17,7 +17,7 @@ route.get("/create", getCreateBlogPost);
 
 route.get("/contact", getContacts);
 
-route.get("/ab  out", getAboutUs);
+route.get("/about", getAboutUs);
 
 // route.post("/create", postNewBlog);
 

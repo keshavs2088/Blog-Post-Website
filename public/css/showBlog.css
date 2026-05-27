@@ -31,6 +31,13 @@ a {
   color: blueviolet;
 }
 
+.date-blog {
+  font-size: small;
+  color: grey;
+  text-align: right;
+  padding-bottom: 1rem;
+}
+
 .img-blog {
   height: 15rem;
   border-radius: 10px;
