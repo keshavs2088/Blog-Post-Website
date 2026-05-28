@@ -29,3 +29,15 @@ export const generateId = function () {
 export const getAllBlogs = function () {
   return blogs.map((blog) => ({ ...blog }));
 };
+
+export const updateBlog = function (blog, blogId) {
+  const index = blogs.findIndex((blog) => blog.id === blogId);
+
+  blogs.splice(index, 1, blog);
+};
+
+export const deleteBlog = function (blogId) {
+  const index = blogs.findIndex((blog) => blog.id === blogId);
+
+  blogs.splice(index, 1);
+};

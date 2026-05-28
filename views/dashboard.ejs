@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="en">
   <head>
     <link rel ='stylesheet' href="/css/dashboard.css"
@@ -68,15 +68,16 @@
                 <div class="date-card">
                   <%= blog.datePublished.split("at")[0].split(", ")[1] %>
                 </div> 
-                <a href="/edit" class="edit-blog">🖋️ Edit</a>
-                <p class="delete">🚩Delete</p>
+                <a href= "/<%= blog.id %>"  class="read-more">📚Read more</a>
+                <a href="/edit/<%= blog.id %>" class="edit-blog">🖋️ Edit</a>
+                <p class="delete" data-id="<%=blog.id%>">🚩Delete</p>
               </section>
             </li>
           <%});%>
           </ul>
         </div>
         <% } %>
-
     </main>
+    <script src="/js/dashboard.js"></script>
   </body>
 </html>

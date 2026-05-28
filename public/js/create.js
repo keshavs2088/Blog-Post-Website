@@ -7,6 +7,12 @@ const quill = new Quill("#editor", {
   placeholder: "Write your blog content here...",
 });
 
+const hiddenContent = document.getElementById("content").value;
+
+if (hiddenContent) {
+  quill.root.innerHTML = hiddenContent;
+}
+
 form.addEventListener("submit", function () {
   document.querySelector("#content").value = quill.root.innerHTML;
 });

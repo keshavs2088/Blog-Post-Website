@@ -144,4 +144,5 @@ li {
   height: 2rem;
   width: 6rem;
   color: red;
+  cursor: pointer;
 }

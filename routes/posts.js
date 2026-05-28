@@ -5,7 +5,10 @@ import {
   getContacts,
   getAboutUs,
   postNewBlog,
+  getEditBlog,
   getBlog,
+  postUpdateBlog,
+  getDeleteBlog,
 } from "../controllers/postControllers.js";
 import upload from "../middlewares/upload.js";
 
@@ -19,10 +22,16 @@ route.get("/contact", getContacts);
 
 route.get("/about", getAboutUs);
 
+route.get("/:id", getBlog);
+
+route.get("/edit/:id", getEditBlog);
+
+route.get("/delete/:id", getDeleteBlog);
+
 // route.post("/create", postNewBlog);
 
 route.post("/create", upload.single("featured-image"), postNewBlog);
 
-route.get("/:id", getBlog);
+route.post("/edit/:id", upload.single("featured-image"), postUpdateBlog);
 
 export default route;
