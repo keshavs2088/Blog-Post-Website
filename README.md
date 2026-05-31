@@ -1,5 +1,15 @@
 MyBlog
 
+Dashboard:
+<img width="1918" height="868" alt="image" src="https://github.com/user-attachments/assets/35e7f950-5fa4-4eef-abd2-0048e75d8dbb" />
+
+Create Blog:
+<img width="1895" height="862" alt="image" src="https://github.com/user-attachments/assets/3697305c-1d62-42d3-9900-5dbe1553fbe7" />
+
+Blog:
+<img width="1918" height="871" alt="image" src="https://github.com/user-attachments/assets/31b0e29b-58dc-496e-8c2c-14b1a83472b9" />
+
+
 A full-stack blogging platform built with Node.js, Express, EJS, and JavaScript. 
 Users can create, edit, view, and delete blog posts, upload featured images, and write rich-text content using the Quill editor.
 
