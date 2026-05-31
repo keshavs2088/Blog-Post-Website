@@ -39,6 +39,10 @@
   margin-bottom: 1rem;
 }
 
+.sorting {
+  cursor: pointer;
+}
+
 .all-blogs {
   height: 65%;
   padding: 1rem 5rem 3rem 5rem;

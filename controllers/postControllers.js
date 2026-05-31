@@ -18,11 +18,11 @@ export const getCreateBlogPost = function (req, res) {
 };
 
 export const getContacts = function (req, res) {
-  res.render("contactUs.ejs");
+  res.render("contactUs.ejs", { createBlogbutton: true });
 };
 
 export const getAboutUs = function (req, res) {
-  res.render("aboutUs.ejs");
+  res.render("aboutUs.ejs", { createBlogbutton: true });
 };
 
 export const getEditBlog = function (req, res) {
@@ -33,20 +33,16 @@ export const getEditBlog = function (req, res) {
 export const postUpdateBlog = function (req, res) {
   const blogId = Number(req.params.id);
 
-  // Get publish date
-  const today = getPublishDate();
+  // Get old image from the existing blog
+  const oldBlog = getBlogFromData(blogId);
 
   // Create an object based on the form submitted
-  const blog = {
-    title: req.body.title,
-    datePublished: today,
-    image: req.file ? req.file.filename : null,
-    content: req.body.content,
-    id: blogId,
-  };
+  const blog = createBlogObject(req, blogId, oldBlog.image);
 
-  updateBlog(blog, blogId);
-  res.status(201).redirect(`/`);
+  const updated = updateBlog(blog, blogId);
+
+  if (!updated) return res.sendStatus(404);
+  else res.status(201).redirect(`/`);
 };
 
 const getPublishDate = function () {
@@ -57,18 +53,20 @@ const getPublishDate = function () {
   }).format(date);
 };
 
-export const postNewBlog = function (req, res) {
-  // Get publish date
-  const today = getPublishDate();
-
-  // Create an object based on the form submitted
-  const blog = {
-    title: req.body.title,
-    datePublished: today,
-    image: req.file ? req.file.filename : null,
+const createBlogObject = function (req, id, existingImage = null) {
+  return {
+    title: req.body.title.trim(),
+    datePublished: getPublishDate(),
+    image: req.file ? req.file.filename : existingImage,
     content: req.body.content,
-    id: generateId(),
+    id,
   };
+};
+
+export const postNewBlog = function (req, res) {
+  // Create an object based on the form submitted
+  const id = generateId();
+  const blog = createBlogObject(req, id);
 
   addBlog(blog);
   res.status(201).redirect(`/${blog.id}`);
@@ -86,6 +84,7 @@ export const getBlog = function (req, res) {
 
 export const getDeleteBlog = function (req, res) {
   const blogId = Number(req.params.id);
-  deleteBlog(blogId);
-  res.sendStatus(200);
+  const deleted = deleteBlog(blogId);
+  if (deleted) res.sendStatus(200);
+  else res.sendStatus(404);
 };

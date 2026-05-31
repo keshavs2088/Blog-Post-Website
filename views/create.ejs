@@ -12,8 +12,7 @@
     <%- include('./partials/navbar.ejs') %>
     <main>
       <form
-      <%= typeof blog !=='undefined' ? action=`/edit/${blog.id}` : action=`/create` %>
-        
+        action = <%= typeof blog !== 'undefined' ? `/edit/${blog.id}` : `/create` %>
         method="POST"
         class="create-post"
         enctype="multipart/form-data"
@@ -51,7 +50,7 @@
         <div class="blog-content">
           <label for="content">Content</label>
           <!-- below 2 lines are used imlementing text editor library and a workaround to access it by express -->
-          <input type="hidden" name="content" id="content"             value = "<%= typeof blog !=="undefined" ? blog.content : "" %>"
+          <input type="hidden" name="content" id="content" value = "<%= typeof blog !=="undefined" ? blog.content : "" %>"
           />
           <div id="editor"></div>
         </div>

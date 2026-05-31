@@ -22,13 +22,11 @@ route.get("/contact", getContacts);
 
 route.get("/about", getAboutUs);
 
-route.get("/:id", getBlog);
-
 route.get("/edit/:id", getEditBlog);
 
-route.get("/delete/:id", getDeleteBlog);
+route.delete("/delete/:id", getDeleteBlog);
 
-// route.post("/create", postNewBlog);
+route.get("/:id", getBlog);
 
 route.post("/create", upload.single("featured-image"), postNewBlog);
 

@@ -33,11 +33,18 @@ export const getAllBlogs = function () {
 export const updateBlog = function (blog, blogId) {
   const index = blogs.findIndex((blog) => blog.id === blogId);
 
+  if (index === -1) return false;
+
   blogs.splice(index, 1, blog);
+  return true;
 };
 
 export const deleteBlog = function (blogId) {
   const index = blogs.findIndex((blog) => blog.id === blogId);
 
+  if (index === -1) return false;
+
   blogs.splice(index, 1);
+
+  return true;
 };
